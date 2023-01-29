@@ -1,0 +1,12 @@
+name: 'mr-tools-milestone-push'
+description: 'Distribute the milestones from a source repository to configured target repositories.'
+inputs:
+  repositories:
+    description: 'Comma delimited list of repositories to synchronise.'
+    required: true
+  token:
+    description: 'Token with access to repositories you wish to push to.'
+    required: true
+runs:
+  using: 'node16'
+  main: './dist/index.js'
