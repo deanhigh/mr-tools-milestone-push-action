@@ -1,3 +1,3 @@
-import { milestonePush } from "mr-tools-lib/src/milestones";
+import { milestonePush } from "mr-tools-lib";
 
-void milestonePush();
+milestonePush();
