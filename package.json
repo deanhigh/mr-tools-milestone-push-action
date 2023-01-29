@@ -37,15 +37,8 @@
   },
   "release": {
     "plugins": [
-      "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/git",
-      [
-        "@semantic-release/github",
-        {
-          "successComment": false
-        }
-      ]
+      "@semantic-release/git"
     ],
     "branches": [
       "main",
