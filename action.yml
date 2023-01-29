@@ -1,5 +1,8 @@
 name: 'mr-tools-milestone-push'
 description: 'Distribute the milestones from a source repository to configured target repositories.'
+branding: 
+  icon: arrow-up
+  color: blue
 inputs:
   repositories:
     description: 'Comma delimited list of repositories to synchronise.'
