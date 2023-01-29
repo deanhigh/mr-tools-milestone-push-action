@@ -1,18 +1,15 @@
-name: Check dist/
+name: Release 
 
 on:
   push:
     branches:
-      - next
-    paths-ignore:
-      - '**.md'
-  pull_request:
+      - main
     paths-ignore:
       - '**.md'
   workflow_dispatch:
 
 jobs:
-  check-dist:
+  release-job:
     runs-on: ubuntu-latest
 
     steps:
@@ -45,10 +42,16 @@ jobs:
           fi
         id: diff
 
-      # If index.js was different than expected, upload the expected version as an artifact
+            # If index.js was different than expected, upload the expected version as an artifact
       - uses: actions/upload-artifact@v2
         if: ${{ failure() && steps.diff.conclusion == 'failure' }}
         with:
           name: dist
           path: dist/
+
+      - run: npx semantic-release
+        if: ${{ failure() && steps.diff.conclusion == 'success' }}
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
