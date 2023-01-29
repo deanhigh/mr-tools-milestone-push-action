@@ -50,7 +50,7 @@ jobs:
           path: dist/
 
       - run: npx semantic-release
-        if: ${{ failure() && steps.diff.conclusion == 'success' }}
+        if: ${{ steps.diff.conclusion == 'success' }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
