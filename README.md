@@ -30,3 +30,7 @@ uses: deanhigh/mr-tools-milestone-push-action@v1.0.0
 with:
   repositories: 'owner/reponame-to-copy-to,org/org-repo-to-copy-to'
 ```
+
+## Releasing
+
+After making changes, run `npm run build  && npm run package` and publish the contents of dist/.

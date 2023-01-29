@@ -49,9 +49,9 @@ jobs:
           name: dist
           path: dist/
 
-      - run: npx semantic-release
-        if: ${{ steps.diff.conclusion == 'success' }}
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - run: npx semantic-release
+      #   if: ${{ steps.diff.conclusion == 'success' }}
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       

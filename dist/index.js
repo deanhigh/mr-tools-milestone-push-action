@@ -9904,8 +9904,8 @@ var __webpack_exports__ = {};
 var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const milestone = __nccwpck_require__(5135);
-milestone.milestonePush();
+const mr_tools_lib_1 = __nccwpck_require__(5135);
+(0, mr_tools_lib_1.milestonePush)();
 
 })();
 
