@@ -6,7 +6,7 @@ This is an action wrapper linked to [Multirepo-tools](https://github.com/deanhig
 
 ## Usage
 
-- Existing milestones with same name will be skipped.
+- **NB** : Existing milestones with same title will be modified.
 - Token must have Issues read/write access for the repositories involved.
 
 ### Inputs
