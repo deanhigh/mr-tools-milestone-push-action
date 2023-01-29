@@ -26,7 +26,7 @@ None at this point
 ### Example usage
 
 ```yaml
-uses: actions/mr-tools-milestone-push@v1.1
+uses: deanhigh/mr-tools-milestone-push-action@v1.0.0
 with:
   repositories: 'owner/reponame-to-copy-to,org/org-repo-to-copy-to'
 ```
